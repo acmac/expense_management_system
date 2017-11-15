@@ -1101,13 +1101,16 @@ int menu_select()
 	int c;
 	do{
 		system("cls"); //清屏
+		cout<<"\t"<<"版权声明：本公司(DarkDream)对其发行的或与合作伙伴发行的作品享有版权，受各国版法及国际版权公约的保护。"<<endl;
+		cout<<"\t"<<"未经本公司(DrakDream)允许不得进行商业用途。"<<endl<<endl;
 		cout<<"\t"<<"欢迎进入私人经济管理系统 "<<endl;
-		cout<<"\t"<<"** ** ** ** ** *"<<endl;
+		cout<<endl;
+		cout<<"\t"<<"** ** ** ** ** ** ** **"<<endl;
 		cout<<"\t"<<"1.输入收支信息"<<endl;
 		cout<<"\t"<<"2.显示收支状况"<<endl;
 		cout<<"\t"<<"3.消费金额分析"<<endl;
 		cout<<"\t"<<"4.退出系统"<<endl;
-		cout<<"\t"<<"** ** ** ** ** *"<<endl;
+		cout<<"\t"<<"** ** ** ** ** ** ** **"<<endl;
 		cout<<"\t"<<"请对应所需选项1-4"<<endl;
 		cin>>c;
 	}while(c<1||c>4);
