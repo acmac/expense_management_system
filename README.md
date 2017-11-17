@@ -26,3 +26,14 @@
 1)鼓励有兴趣的同学可以自己扩充系统功能。
 2）鼓励采用Turbo C/C++、MFC等开发工具，实现彩色或图形操作界面
 3）鼓励引入商业运作机制，给出合理化理财建议
+
+下面给出程序界面部分的截图：
+
+
+![1](https://github.com/acmac/expense_management_system/blob/master/%E7%A8%8B%E5%BA%8F%E6%88%AA%E5%9B%BE/MA%7D00%25OQ%60H2R58NI%40MPDCMD.png)
+
+![2](https://github.com/acmac/expense_management_system/blob/master/%E7%A8%8B%E5%BA%8F%E6%88%AA%E5%9B%BE/Y0B%7D1L%60BT4B%5DFL9DX%25%5B0GNC.png )
+
+![3](https://github.com/acmac/expense_management_system/blob/master/%E7%A8%8B%E5%BA%8F%E6%88%AA%E5%9B%BE/X_%7D%25HC%60U%5D%24ST~D9%24WP%7B%60QUS.png)
+
+
