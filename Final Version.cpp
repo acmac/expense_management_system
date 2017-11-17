@@ -31,17 +31,17 @@ int inputData(person sum[],int n)
 	
 	while(sign!='n'&&sign!='N')
 	{
-		cout<<"\t"<<"支出的种类"<<endl;
+		cout<<"\t"<<"支出的种类:"<<"\t";
 		cin>>sum[n+i].type;  
-		cout<<"\t"<<"支出的金额(大于0)"<<endl;
+		cout<<"\t"<<"支出的金额(大于0):"<<"\t";
 		cin>>sum[n+i].getSum;
 		
-		cout<<"还需要再次输入吗？（y/n）";
+		cout<<"\t"<<"还需要再次输入吗？（y/n）:"<<"\t";
 		cin>>sign;
 		i++;
 	}
 	
-	cout<<"请输入收入的金额"<<endl;
+	cout<<"\t"<<"请输入收入的金额:"<<"\t";
 	cin>>sum[n+i].income;
 	
 	return (n+i);
@@ -52,7 +52,7 @@ void saveData(person sum[],int n)
 {
 	int i,month;
 	FILE *fp;
-	cout<<"\t"<<"请输入当前信息所属的月份:"<<endl;
+	cout<<"\t"<<"请输入当前信息所属的月份:"<<"\t";
 	cin>>month;
 	switch(month)
 	{
@@ -339,7 +339,7 @@ void showItems(person sum[],int n)
 { 
 	int i=0,month;
 	FILE *fp;
-	cout<<"\t"<<"请输入月份(1-12):"<<endl;
+	cout<<"\t"<<"请输入月份(1-12):"<<"\t";
 	cin>>month;
 	
 	cout<<"-------------------------------"<<endl;
@@ -610,7 +610,7 @@ void AnalyseItems(person sum[],int n)
 	float total=0,a=0,income;
 	int i=0,j=0,month;
 	FILE *fp;
-	cout<<"\t"<<"请选择月份（1-12）:"<<endl;
+	cout<<"\t"<<"请选择月份（1-12）:"<<"\t";
 	cin>>month;
 	cout<<"种类"<<"\t"<<"金额"<<endl;
 	
@@ -647,7 +647,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -675,7 +675,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\二月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -687,7 +687,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -715,7 +715,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\三月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -727,7 +727,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -735,7 +735,6 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		break;
 		   }
-		
 	case 4:{
 		fp=fopen("D:\\四月份的支出信息.txt","r");
 		if(fp==NULL)
@@ -755,7 +754,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\四月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -767,7 +766,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -775,6 +774,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		break;
 		   }
+
 	case 5:{
 		fp=fopen("D:\\五月份的支出信息.txt","r");
 		if(fp==NULL)
@@ -794,7 +794,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\五月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -806,7 +806,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -834,7 +834,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\六月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -846,7 +846,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -874,7 +874,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\七月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -886,7 +886,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -914,7 +914,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\八月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -926,7 +926,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -953,7 +953,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\九月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -965,7 +965,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -993,7 +993,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\十月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -1005,7 +1005,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -1033,7 +1033,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\十一月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -1045,7 +1045,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -1073,7 +1073,7 @@ void AnalyseItems(person sum[],int n)
 		fclose(fp);
 		
 		//第二步，从文件中分别读取每种支出的消费，除以总消费
-		fp=fopen("D:\\一月份的支出信息.txt","r");
+		fp=fopen("D:\\十二月份的支出信息.txt","r");
 		while(!feof(fp))
 		{
 			fscanf(fp,"%s%f",sum[i].type,&sum[i].getSum);
@@ -1085,7 +1085,7 @@ void AnalyseItems(person sum[],int n)
 			printf("项目%-8s 占总比%-8f%\n",sum[i].type,sum[i].getSum/total);
 		}
 		
-		cout<<"请输入本月的收入: "<<endl;
+		cout<<"请输入本月的收入: "<<"\t";
 		cin>>income;
 		
 		cout<<"消费总额为:"<<"\t"<<total-income<<endl;
@@ -1096,24 +1096,119 @@ void AnalyseItems(person sum[],int n)
 	}
 }
 
+
+//删除某月份的收支情况
+void deleteData(person sum[],int n)
+{
+	int month;
+	
+	cout<<"\t"<<"请输入当前信息所属的月份:"<<"\t";
+	cin>>month;
+	switch(month)
+	{
+	case 1:{
+			if(remove("D:\\一月份的支出信息.txt"))
+			{
+			    cout <<"一月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 2:{
+			if(remove("D:\\二月份的支出信息.txt"))
+			{
+			    cout <<"二月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 3:{
+			if(remove("D:\\三月份的支出信息.txt"))
+			{
+			    cout <<"三月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 4:{
+			if(remove("D:\\四月份的支出信息.txt"))
+			{
+			    cout <<"四月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 5:{
+			if(remove("D:\\五月份的支出信息.txt"))
+			{
+			    cout <<"五月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 6:{
+			if(remove("D:\\六月份的支出信息.txt"))
+			{
+			    cout <<"六月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 7:{
+			if(remove("D:\\七月份的支出信息.txt"))
+			{
+			    cout <<"七月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 8:{
+			if(remove("D:\\八月份的支出信息.txt"))
+			{
+			    cout <<"八月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 9:{
+			if(remove("D:\\九月份的支出信息.txt"))
+			{
+			    cout <<"九月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 10:{
+			if(remove("D:\\十月份的支出信息.txt"))
+			{
+			    cout <<"十月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 11:{
+			if(remove("D:\\十一月份的支出信息.txt"))
+			{
+			    cout <<"十一月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }
+	case 12:{
+			if(remove("D:\\十二月份的支出信息.txt"))
+			{
+			    cout <<"十二月份的支出信息已经删除.txt "<< endl ;
+			}			
+			break;
+		   }	
+	}
+}
+
 int menu_select()
 {
 	int c;
 	do{
 		system("cls"); //清屏
-		cout<<"\t"<<"版权声明：本公司(DarkDream)对其发行的或与合作伙伴发行的作品享有版权，受各国版法及国际版权公约的保护。"<<endl;
-		cout<<"\t"<<"未经本公司(DrakDream)允许不得进行商业用途。"<<endl<<endl;
 		cout<<"\t"<<"欢迎进入私人经济管理系统 "<<endl;
-		cout<<endl;
-		cout<<"\t"<<"** ** ** ** ** ** ** **"<<endl;
+		cout<<"\t"<<"** ** ** ** ** *"<<endl;
 		cout<<"\t"<<"1.输入收支信息"<<endl;
 		cout<<"\t"<<"2.显示收支状况"<<endl;
 		cout<<"\t"<<"3.消费金额分析"<<endl;
-		cout<<"\t"<<"4.退出系统"<<endl;
-		cout<<"\t"<<"** ** ** ** ** ** ** **"<<endl;
-		cout<<"\t"<<"请对应所需选项1-4"<<endl;
+		cout<<"\t"<<"4.删除收支数据"<<endl;
+		cout<<"\t"<<"5.退出系统"<<endl;
+		cout<<"\t"<<"** ** ** ** ** *"<<endl;
+		cout<<"\t"<<"请对应所需选项1-5"<<"\t";
 		cin>>c;
-	}while(c<1||c>4);
+	}while(c<1||c>5);
 	return c;
 }
 
@@ -1131,12 +1226,12 @@ void main()//主函数
 		switch(menu_select()) //选择菜单序号 
 		{  
 		case 1:  
-			cout<<"\t"<<"请输入相应的收支情况"<<endl;
+			cout<<"\t"<<"请输入相应的收支情况:"<<endl;
 			
 			n=inputData(per,n);   //输入消费信息的类别，n是用来储存消费的种类个数
 			sortItems(per,n);
 			
-			cout<<"\t"<<"需要保存数据吗？ (y,n)"<<endl;
+			cout<<"\t"<<"需要保存数据吗？ (y,n)"<<"\t";
 			getchar();
 			cin>>c;
 			if(c=='y'||c=='Y')
@@ -1154,9 +1249,17 @@ void main()//主函数
 			AnalyseItems(per,n);
 			system("pause");
 			break;
-			
+
 		case 4:
-			cout<<"\t"<<"你确定退出系统吗？ y/n"<<endl;
+            cout<<"\t"<<"删除数据吗？(y/n) "<<"\t" ;
+            getchar();
+            cin>>c;
+            if(c=='y'||c=='Y')
+            deleteData(per,n);
+            break;
+			
+		case 5:
+			cout<<"\t"<<"你确定退出系统吗？ y/n"<<"\t";
 			getchar();
 			cin>>c;
 			if(c=='y'||c=='Y')
